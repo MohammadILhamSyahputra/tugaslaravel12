@@ -5,7 +5,7 @@
 <br>
 <div class="container">
     <h2>Tabel Produk</h2>
-    <a href="{{route('produk.create')}}" class="btn btn-success"> + Tambah Data</a>
+    <a href="{{route('produk.create')}}" class="btn btn-success mb-3" > + Tambah Data</a>
     <table class="table table-bordered table striped" id="tabel-produk">
         <thead>
         <tr>
@@ -26,8 +26,14 @@
         <td>{{ number_format($data->harga, 0, ',', '.') }}</td>
         <td>{{ $data->stock }}</td>
         <td>
-            <button class="btn btn-warning">Ubah</button>
-            <button class="btn btn-danger">Hapus</button>
+            <form action="{{ route('produk.delete', $data->id) }}" method="post">
+                @csrf
+                <a href="{{ route('produk.edit', $data->id) }}" class="btn btn-warning">Ubah</a>
+                <button class="btn btn-danger">Hapus</button>
+            </form>
+            {{-- <a href="{{route('produk.edit', $data->id)}}" class="btn btn-warning">Ubah</a> --}}
+            {{-- <button class="btn btn-warning">Ubah</button> --}}
+            {{-- <button class="btn btn-danger">Hapus</button> --}}
         </td>
     </tr>
     @endforeach

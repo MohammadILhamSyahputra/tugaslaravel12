@@ -8,7 +8,7 @@
         <div class="col-md-6">
             <h4>Form Input Data</h4>
             <br>
-            <form action="" method="POST">
+            <form action="{{route('produk.store')}}" method="POST">
                 @csrf
                 <div class="form-group">
                     <label for="id">Kode Produk <span class="text-danger">*</span></label>
@@ -31,7 +31,7 @@
                 </div>
                 <br>
                 <button type="submit" class="btn btn-primary">Simpan</button>
-                <a href="" class="btn btn-success">Kembali</a>
+                <a href="{{ url('tampil-produk') }}" class="btn btn-success">Kembali</a>
             </form>
         </div>
     </div>
