@@ -6,12 +6,16 @@
 <div class="container">
     <h2>Tabel Produk</h2>
     <a href="{{route('produk.create')}}" class="btn btn-success mb-3" > + Tambah Data</a>
+    <a href="{{route('produk.excel')}}" class="btn btn-primary mb-3" > Excel </a>
+    <a href="{{route('produk.pdf')}}" class="btn btn-secondary pull-right mb-3" target="_blank"> PDF </a>
+    <a href="{{route('chart')}}" class="btn btn-dark mb-3" > Chart </a>
     <table class="table table-bordered table striped" id="tabel-produk">
         <thead>
         <tr>
             <th style="width:1%">No.</th>
             <th style="width:5%">Kode Produk</th>
             <th style="width:5%">Nama Produk</th>
+            <th style="width:5%">Kategori</th>
             <th style="width:5%">Harga</th>
             <th style="width:5%">Stok</th>
             <th style="width:5%">Aksi</th>
@@ -23,6 +27,7 @@
         <td>{{ $loop->iteration }}</td>
         <td>{{ $data->id }}</td>
         <td>{{ $data->nama_produk }}</td>
+        <td>{{ $data->kategori->nama_kategori }}</td>
         <td>{{ number_format($data->harga, 0, ',', '.') }}</td>
         <td>{{ $data->stock }}</td>
         <td>

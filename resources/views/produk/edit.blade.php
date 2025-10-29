@@ -21,7 +21,17 @@
                     <input class="form-control" type="text" name="nama_produk" id="nama_produk"
                         value="{{ $data->nama_produk }}">
                 </div>
-
+                <div class="form-group">
+                    <label class="form-label">Kategori</label>
+                    <select class="form-control" id="kategori" name="kategori" value="{{ $data->kategori_id }}">
+                        @foreach ($kat as $scat)
+                            <option value="{{ $scat->id }}"
+                                {{ $scat->id == $data->kategori_id ? 'selected' : '' }}>
+                                {{ $scat->nama_kategori }}
+                            </option>
+                        @endforeach
+                    </select>
+                </div>
                 <div class="form-group">
                     <label for="harga">Harga <span class="text-danger">*</span></label>
                     <input class="form-control" type="text" name="harga" id="harga"
