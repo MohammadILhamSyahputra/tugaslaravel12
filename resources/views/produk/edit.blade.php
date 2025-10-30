@@ -24,10 +24,10 @@
                 <div class="form-group">
                     <label class="form-label">Kategori</label>
                     <select class="form-control" id="kategori" name="kategori" value="{{ $data->kategori_id }}">
-                        @foreach ($kat as $scat)
-                            <option value="{{ $scat->id }}"
-                                {{ $scat->id == $data->kategori_id ? 'selected' : '' }}>
-                                {{ $scat->nama_kategori }}
+                        @foreach ($kat as $cat)
+                            <option value="{{ $cat->id }}"
+                                {{ $cat->id == $data->kategori_id ? 'selected' : '' }}>
+                                {{ $cat->nama_kategori }}
                             </option>
                         @endforeach
                     </select>

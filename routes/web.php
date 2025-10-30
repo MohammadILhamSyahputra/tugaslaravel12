@@ -101,7 +101,7 @@ Route::get('/produk/chart', [ProdukController::class, 'chart'])->name('chart');
 
 // Routing Kategori
 Route::controller(KategoriController::class)->group(function() {
-    Route::get('tampil-kategori', 'index');
+    Route::get('tampil-kategori', 'index')->name('kategori.index');
     Route::get('tambah-kategori', 'create')->name('kategori.create');
     Route::post('tampil-kategori', 'store')->name('kategori.store');
     Route::get('/kategori/edit/{id}', 'edit')->name('kategori.edit');
