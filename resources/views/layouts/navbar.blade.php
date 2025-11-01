@@ -15,10 +15,10 @@
           <a class="nav-link" href="/tampil-produk">Produk</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/daftar-mhs">Transaksi</a>
+          <a class="nav-link" href="/tampil-kategori">Kategori</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/profil">laporan</a>
+          <a class="nav-link" href="/profil">Laporan</a>
         </li>
       </ul>
     </div>
