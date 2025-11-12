@@ -79,7 +79,7 @@ Route::get('produk', [PraktikumController::class, 'product']);
 Route::get('transaksi', [PraktikumController::class, 'transaction']);
 Route::get('laporan', [PraktikumController::class, 'report']);
 
-// Menampilkan Form BMI
+
 Route::get('/bmi', [BmiController::class, 'index'])->name('bmi.index');
 
 
