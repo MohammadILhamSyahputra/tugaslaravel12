@@ -82,7 +82,7 @@ Route::get('laporan', [PraktikumController::class, 'report']);
 // Menampilkan Form BMI
 Route::get('/bmi', [BmiController::class, 'index'])->name('bmi.index');
 
-// Hasil Hitung BMI
+
 Route::post('/bmi-result', [BmiController::class, 'result'])->name('bmi.result');
 
 
